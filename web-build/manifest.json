@@ -1,0 +1,9 @@
+{
+  "background_color": "#ffffff",
+  "display": "standalone",
+  "lang": "en",
+  "name": "Advisor.AI",
+  "short_name": "Advisor.AI",
+  "start_url": "/?utm_source=web_app_manifest",
+  "orientation": "portrait"
+}
