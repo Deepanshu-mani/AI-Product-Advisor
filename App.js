@@ -189,8 +189,8 @@ function AppContent() {
           <Animated.View style={{ transform: [{ rotate: spin }] }}>
             <Ionicons 
               name={isDarkTheme ? "sunny" : "moon"} 
-              size={20} 
-              color={isDarkTheme ? "#000000" : "#ffffff"} 
+              size={24} 
+              color={isDarkTheme ? "#FFA500" : "#FFD700"} 
             />
           </Animated.View>
         </TouchableOpacity>
