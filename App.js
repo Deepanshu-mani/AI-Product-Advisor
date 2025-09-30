@@ -187,11 +187,13 @@ function AppContent() {
           activeOpacity={0.8}
         >
           <Animated.View style={{ transform: [{ rotate: spin }] }}>
-            <Ionicons 
-              name={isDarkTheme ? "sunny" : "moon"} 
-              size={24} 
-              color={isDarkTheme ? "#FFA500" : "#FFD700"} 
-            />
+            <Text style={{ 
+              fontSize: 20, 
+              fontWeight: 'bold',
+              color: isDarkTheme ? "#FFA500" : "#FFD700"
+            }}>
+              {isDarkTheme ? "☀️" : "🌙"}
+            </Text>
           </Animated.View>
         </TouchableOpacity>
       </View>
