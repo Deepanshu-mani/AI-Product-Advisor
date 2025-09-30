@@ -190,7 +190,7 @@ function AppContent() {
             <Ionicons 
               name={isDarkTheme ? "sunny" : "moon"} 
               size={20} 
-              color={currentTheme.colors.primaryForeground} 
+              color={isDarkTheme ? "#000000" : "#ffffff"} 
             />
           </Animated.View>
         </TouchableOpacity>
