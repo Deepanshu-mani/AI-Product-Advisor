@@ -257,12 +257,24 @@ function AppContent() {
         
         {recommendations.length > 0 && (
           <View style={styles.recommendationsContainer}>
-            <View style={styles.recommendationsHeader}>
-              <Ionicons name="checkmark-circle" size={24} color={currentTheme.colors.success} />
-              <Text style={[styles.recommendationsTitle, { color: currentTheme.colors.text }]}>
-                {recommendations.length} Recommendation{recommendations.length !== 1 ? 's' : ''} Found
-              </Text>
-            </View>
+            {/* Check if this is a "no match" response */}
+            {recommendations.length === 1 && 
+             recommendations[0].product_name === "No valid match found" && 
+             recommendations[0].brand === "N/A" ? (
+              <View style={styles.recommendationsHeader}>
+                <Ionicons name="alert-circle" size={24} color={currentTheme.colors.destructive} />
+                <Text style={[styles.recommendationsTitle, { color: currentTheme.colors.text }]}>
+                  0 Recommendations Found
+                </Text>
+              </View>
+            ) : (
+              <View style={styles.recommendationsHeader}>
+                <Ionicons name="checkmark-circle" size={24} color={currentTheme.colors.success} />
+                <Text style={[styles.recommendationsTitle, { color: currentTheme.colors.text }]}>
+                  {recommendations.length} Recommendation{recommendations.length !== 1 ? 's' : ''} Found
+                </Text>
+              </View>
+            )}
             {recommendations.map((item, index) => (
               <ProductCard 
                 key={index} 
